@@ -9,7 +9,7 @@ export default function BaseLayout(){
             </header> */}
             <Navbar/>
 
-            <main style={{ minHeight: '80vh', padding: '1rem' }}>
+            <main className="md:px-14">
                 <Outlet/>
             </main>
 
