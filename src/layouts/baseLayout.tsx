@@ -1,11 +1,13 @@
 import { Outlet } from "react-router-dom";
+import Navbar from "../components/navbar";
 
 export default function BaseLayout(){
     return(
         <>
-            <header style={{ backgroundColor: '#f8f9fa' }}>
-                <h1>Health Literacy App</h1>
-            </header>
+            {/* <header style={{ backgroundColor: '#f8f9fa' }}>
+                <Navbar/>
+            </header> */}
+            <Navbar/>
 
             <main style={{ minHeight: '80vh', padding: '1rem' }}>
                 <Outlet/>
