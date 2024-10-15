@@ -1,3 +1,4 @@
+import InputForm from "../../components/forms/inputForm";
 import Logo from "../../components/logo";
 
 export default function LoginPage() {
@@ -8,33 +9,29 @@ export default function LoginPage() {
           <Logo />
         </div>
         <form className="space-y-6" action="#">
-          <h5 className="text-xl font-medium">
-            Sign in to our platform
-          </h5>
+          <h5 className="text-xl font-medium">Sign in to our platform</h5>
           <div>
-            <label className="block mb-2 text-sm font-medium text-gray-900 ">
-              Your email
-            </label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:border-gray-500 dark:placeholder-gray-400"
-              placeholder="name@company.com"
-              required
+            <InputForm
+              name={"email"}
+              type={"email"}
+              label={"Email"}
+              placeholder={"Enter your email address"}
+              value={""}
+              onChange={function (): void {
+                throw new Error("Function not implemented.");
+              }}
             />
           </div>
           <div>
-            <label className="block mb-2 text-sm font-medium text-gray-900">
-              Your password
-            </label>
-            <input
-              type="password"
-              name="password"
-              id="password"
-              placeholder="••••••••"
-              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-500 dark:placeholder-gray-400 "
-              required
+            <InputForm
+              name={"password"}
+              type={"password"}
+              label={"Password"}
+              placeholder={"Enter your password"}
+              value={""}
+              onChange={function (): void {
+                throw new Error("Function not implemented.");
+              }}
             />
           </div>
           <div className="flex items-start">
