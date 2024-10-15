@@ -1,4 +1,8 @@
+import { useNavigate } from "react-router-dom";
+import Logo from "./logo";
+
 export default function Navbar() {
+  const navigate = useNavigate()
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
@@ -7,6 +11,11 @@ export default function Navbar() {
     { href: "/blog", label: "Blog" },
     { href: "/careers", label: "Careers" },
   ];
+
+  const handleSignInClick=()=> {
+    navigate('/signIn')
+  } 
+
   return (
     <nav className="bg-white border-gray-200">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -19,13 +28,16 @@ export default function Navbar() {
             className="h-8"
             alt="Flowbite Logo"
           />
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-            Flowbite
+          <span className="self-center text-2xl font-semibold whitespace-nowrap ">
+            <Logo />
           </span>
         </a>
-        <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse"> 
+        <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
           <button
             type="button"
+            onClick={handleSignInClick}
+            data-modal-target="popup-modal"
+            data-modal-toggle="popup-modal"
             className="text-white bg-blue-700  hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-md text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
             Sign In

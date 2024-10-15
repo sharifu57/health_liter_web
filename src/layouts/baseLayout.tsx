@@ -9,11 +9,11 @@ export default function BaseLayout(){
             </header> */}
             <Navbar/>
 
-            <main className="md:px-14">
+            <main style={{ minHeight: '80vh', }}>
                 <Outlet/>
             </main>
 
-            <footer style={{ backgroundColor: '#f8f9fa', padding: '1rem', marginTop: 'auto' }}>
+            <footer style={{ backgroundColor: '#f8f9fa', marginTop: 'auto' }}>
                 &copy; 2022 Health Literacy App. All rights reserved. Designed by Team Health Literacy.
             </footer>
         </>
