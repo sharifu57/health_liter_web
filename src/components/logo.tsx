@@ -1,8 +1,16 @@
-
-import React from 'react'
+import React from "react";
 
 export default function Logo() {
   return (
-    <div>Logo</div>
-  )
+    <div>
+      <img
+        src="https://flowbite.com/docs/images/logo.svg"
+        className="h-8"
+        alt="Flowbite Logo"
+      />
+      <span className="self-center text-2xl font-semibold whitespace-nowrap ">
+        <Logo />
+      </span>
+    </div>
+  );
 }

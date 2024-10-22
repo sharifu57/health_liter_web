@@ -8,7 +8,7 @@ export default function HomePage() {
         <div className="md:container mx-auto px-4 lg:px-8">
           <div className="md:grid md:grid-cols-2 gap-4">
             {/* Left Column - Center the content vertically */}
-            <div className="flex flex-col justify-center min-h-[80vh]">
+            <div className="flex flex-col justify-center min-h-[80vh] md:px-10">
               <h1 className="text-5xl font-bold">Health Study Hub</h1>
               <p className="pt-6 ">
                 It is a long established fact that a reader will be distracted
